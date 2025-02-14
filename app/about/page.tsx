@@ -2,7 +2,7 @@ import About from '@/components/About'
 import React from 'react'
 import Image from "next/image"
 import { MaxWidthWrapper } from '@/components/ui/max-width'
-import { coreValues, Teams } from '@/data/data'
+import { coreValues } from '@/data/data'
 import MissionVision from '@/components/MissionVision'
 import Testimonies from '@/components/Testimonies'
 import Team from '@/components/Team'
