@@ -4,7 +4,7 @@ import { MaxWidthWrapper } from './max-width'
 import Image from "next/image"
 import { serviceProps } from '@/types'
 import { Check } from 'lucide-react'
-import ServicesSlider from '../services-slider'
+// import ServicesSlider from '../services-slider'
 const DisplayTemplate = ({ data, heroImg }: serviceProps) => {
     return (
         <div className='w-full'>

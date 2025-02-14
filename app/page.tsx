@@ -10,8 +10,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 
 import { MaxWidthWrapper } from "@/components/ui/max-width";
-import { features, services, testimonials } from "@/data/data";
-import { Mail, MoveUpRight, Phone, Send } from "lucide-react";
+import { features, services } from "@/data/data";
 import FAQs from "@/components/FAQs";
 import About from "@/components/About";
 import Testimonies from "@/components/Testimonies";
@@ -230,8 +229,8 @@ const Agob = () => {
         <MaxWidthWrapper>
           <div className="w-full p-2">
             <div>
-              <h3 className="text-4xl text-dark_green">Frequentl Asked Questions</h3>
-              <p className="text-lg my-3">Got Questions? We've got answers, Explore our FAQs to learn more about Agob Synergy&apos;s inovative approach and multi-industry expertise.</p>
+              <h3 className="text-4xl text-dark_green">Frequently Asked Questions</h3>
+              <p className="text-lg my-3">Got Questions? We&apos;ve got answers, Explore our FAQs to learn more about Agob Synergy&apos;s inovative approach and multi-industry expertise.</p>
               <div className="relative w-full h-80 overflow-hidden">
                 <Image src={"/FAQs.jpg"} alt="faqs" fill priority objectFit="cover" objectPosition="center" />
               </div>

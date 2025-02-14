@@ -8,7 +8,7 @@ const MissionVision = () => {
                 <div>
                     <div className='w-full px-2'>
                         <p className='text-2xl text-dark_green font-semibold'>Our <span className='text-light_green'>mission</span></p>
-                        <p className='text-dark_green text-lg mb-3'>Empowering Progress Through Sustainable Innovation"</p>
+                        <p className='text-dark_green text-lg mb-3'>Empowering Progress Through Sustainable Innovation</p>
                         <p className='text-lg'>At Agob Synergy, our mission is to deliver integrated solutions that drive growth and foster positive change across industries. We are committed to leveraging cutting-edge technology, creative problem-solving, and sustainable practices to empower our partners and communities. Every project we undertake is guided by our core values of integrity, excellence, and collaboration—ensuring that we not only meet today’s needs but also build a resilient foundation for tomorrow</p>
                         <p className='text-2xl text-dark_green font-semibold'>Our <span className='text-light_green'>Vision</span></p>
                         <p className='text-dark_green text-lg mb-3'>Shaping a Resilient Future for All</p>
