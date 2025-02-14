@@ -83,4 +83,13 @@
     height: 4px;
     @apply bg-dark_green mt-3
   }
+  .ig-gradient{
+    background-image: linear-gradient(45deg, #FEDA74 0%, #FE7E1E 20%, #D62976 50%, #962FDF 75%, #4F5BD5 100%);
+  }
+  .link-style li{
+    @apply  hover:bg-dark_green hover:text-light_green transition-all duration-500 delay-200
+  }
+  .link-style li a{
+    @apply block text-dark_green text-lg my-4 p-4 text-left hover:text-light_green 
+  }
 }

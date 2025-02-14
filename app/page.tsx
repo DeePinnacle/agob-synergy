@@ -2,14 +2,20 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaStar } from "react-icons/fa";
 
 // embla imports
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+
+
 import { MaxWidthWrapper } from "@/components/ui/max-width";
 import { features, services, testimonials } from "@/data/data";
+import { Mail, MoveUpRight, Phone, Send } from "lucide-react";
+import FAQs from "@/components/FAQs";
+import About from "@/components/About";
+import Testimonies from "@/components/Testimonies";
+import ContactUs from "@/components/contact-us";
 
 const Agob = () => {
   // embla config
@@ -37,8 +43,8 @@ const Agob = () => {
             industry at a time.
           </p>
           <Link
-            href=""
-            className="bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center"
+            href="/contact"
+            className="bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center uppercase"
           >
             Get in Touch
           </Link>
@@ -63,7 +69,7 @@ const Agob = () => {
                       objectPosition="center"
                     />
                     <div className="overlay">
-                      <p className="text-right my-2">Agop-Agriculture</p>
+                      <p className="text-right my-2 uppercase">Agob-Agriculture</p>
                     </div>
                   </div>
                 </div>{" "}
@@ -78,7 +84,7 @@ const Agob = () => {
                       objectPosition="center"
                     />
                     <div className="overlay">
-                      <p className="text-right my-2">Agop-Electrician</p>
+                      <p className="text-right my-2 uppercase">Agob-Electrician</p>
                     </div>
                   </div>
                 </div>{" "}
@@ -93,7 +99,7 @@ const Agob = () => {
                       objectPosition="center"
                     />
                     <div className="overlay">
-                      <p className="text-right my-2">Agop-Agriculture</p>
+                      <p className="text-right my-2 uppercase">Agob-Car-Rent</p>
                     </div>
                   </div>
                 </div>{" "}
@@ -108,7 +114,7 @@ const Agob = () => {
                       objectPosition="center"
                     />
                     <div className="overlay">
-                      <p className="text-right my-2">Agop-Agriculture</p>
+                      <p className="text-right my-2 uppercase">Agob-Construction</p>
                     </div>
                   </div>
                 </div>
@@ -118,56 +124,7 @@ const Agob = () => {
         </div>
       </section>
       {/* about agob-synergy */}
-      <section>
-        <MaxWidthWrapper>
-          <div className="w-full">
-            <div className="p-2">
-              <div className="">
-                <p className="text-dark_green text-lg font-semibold">
-                  Who we are
-                </p>
-                <h3 className="text-2xl font-semibold text-style">
-                  About <span className="text-light_green">Agob-Synergy</span>
-                </h3>
-                <p className="my-3">
-                  Innovating Across Industries, Empowering Sustainable Growth.
-                </p>
-              </div>
-              <p className="text-lg">
-                Agob Synergy is a dynamic multi-vendor enterprise committed to
-                excellence across diverse sectors. With deep roots in real
-                estate, agriculture, construction, electrical merchandising, and
-                logistics, we harness innovative strategies and sustainable
-                practices to drive transformative projects.
-              </p>
-              <p className="text-lg mb-2">
-                Our integrated approach ensures that every initiative not only
-                meets modern standards of quality and efficiency but also
-                contributes to building resilient communities and fostering
-                long-term prosperity...{" "}
-              </p>
-              <Link
-                href=""
-                className="bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center"
-              >
-                Learn more &rarr;
-              </Link>
-            </div>
-            <div className="w-full my-4">
-              <div className="relative w-full h-96">
-                <Image
-                  src="/agro-4.jpg"
-                  alt="farmers"
-                  fill
-                  priority
-                  objectFit="cover"
-                  objectPosition="center"
-                />
-              </div>
-            </div>
-          </div>
-        </MaxWidthWrapper>
-      </section>
+      <About />
       {/* service section */}
       <section className="w-full">
         <div className="p-2">
@@ -188,8 +145,8 @@ const Agob = () => {
               >
                 <div className="relative w-full h-64">
                   <Image
-                    src="/construction.jpg"
-                    alt="construction"
+                    src={`/${service.image}`}
+                    alt={service.title}
                     fill
                     priority
                     objectFit="cover"
@@ -205,7 +162,7 @@ const Agob = () => {
                     {service.description}...{" "}
                     <span>
                       <Link
-                        href={`/services/${service.id}`}
+                        href={`/service/${service.link}`}
                         className="text-dark_green font-semibold"
                       >
                         Read more
@@ -267,51 +224,28 @@ const Agob = () => {
         </MaxWidthWrapper>
       </section>
       {/* testimonial section */}
-      <section className="w-full">
-        <div className="p-2">
-          <p className="text-dark_green">
-            Voice of<span className="text-light_green">Trust</span>
-          </p>
-          <h1 className="text-style text-2xl font-semibold">
-            What Our<span className="text-light_green">Clients</span> Are Saying
-          </h1>
-          <p className="my-3">
-            Our clients and partners speak for us. Learn how our commitment to
-            excellence and innovation has made a lasting impact across multiple
-            sectors.
-          </p>
-        </div>
+      <Testimonies />
+      {/* FAQs section */}
+      <section className="w-full mb-4 mt-16">
         <MaxWidthWrapper>
-          <div className="w-full">
-            {testimonials?.map((value) => (
-              <div
-                key={value.id}
-                className="w-full px-2 my-3 flex flex-col items-center justify-center"
-              >
-                <p className="text-center text-dark_green text-xl my-3">
-                  {value.company}
-                </p>
-                <p className="text-center text-lg">{value.testimonial}</p>
-                <span className="flex flex-row items-center gap-2 mt-4 mb-2 text-light_green text-xl">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </span>
-                <p className="text-center text-lg font-bold">{value.name}</p>
-                <p className="text-center text-lg font-semibold">
-                  {value.position}
-                </p>
+          <div className="w-full p-2">
+            <div>
+              <h3 className="text-4xl text-dark_green">Frequentl Asked Questions</h3>
+              <p className="text-lg my-3">Got Questions? We've got answers, Explore our FAQs to learn more about Agob Synergy&apos;s inovative approach and multi-industry expertise.</p>
+              <div className="relative w-full h-80 overflow-hidden">
+                <Image src={"/FAQs.jpg"} alt="faqs" fill priority objectFit="cover" objectPosition="center" />
               </div>
-            ))}
+            </div>
+            <div>
+              <FAQs />
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
       {/* cta section */}
-      <div className="w-full px-2">
-        <div className="w-full bg-light_green">
-          <div className="w-full h-96 bg-red-400 relative">
+      <div className="w-full my-8 p-2 bg-light_green">
+        <div className="w-full 2">
+          <div className="w-[90%] h-96 relative">
             <Image
               src={"/workers.jpg"}
               alt="agob-logo"
@@ -321,7 +255,7 @@ const Agob = () => {
               objectPosition="center"
             />
           </div>
-          <div className="w-full h-96 bg-red-400 relative -top-36">
+          <div className="w-[90%] h-96 relative -top-44 left-8">
             <Image
               src={"/agob-logo.jpg"}
               alt="agob-logo"
@@ -332,7 +266,19 @@ const Agob = () => {
             />
           </div>
         </div>
+        <div className="relative -top-40">
+          <h1 className="text-5xl text-dark_green my-2">Join the Movement Towards Innovation.</h1>
+          <p className="text-lg text-dark_green my-3">Partner with Agob Synergy and unlock transformative solutions tailored to your industry needs. Connect with us today to explore how we can shape a sustainable tomorrow.</p>
+          <Link
+            href="/contact"
+            className="bg-dark_green w-3/5 h-14 text-lg text-light_green shadow-2xl shadow-light_green flex items-center justify-center uppercase"
+          >
+            Connect Now
+          </Link>  
+        </div>
       </div>
+      {/* contact section */}
+      <ContactUs />
     </div>
   );
 };
