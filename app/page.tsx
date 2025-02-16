@@ -15,6 +15,7 @@ import FAQs from "@/components/FAQs";
 import About from "@/components/About";
 import Testimonies from "@/components/Testimonies";
 import ContactUs from "@/components/contact-us";
+import FAQSection from "@/components/FAQSection";
 
 const Agob = () => {
   // embla config
@@ -31,19 +32,19 @@ const Agob = () => {
     <div>
       <section className="w-full lg:flex lg:flex-row">
         <div className="px-4 py-6">
-          <p className="text-light_green ml-2">Agob-Synergy</p>
-          <p className="text-5xl">
+          <p className="text-light_green ml-2 md:text-2xl">Agob-Synergy</p>
+          <p className="text-5xl md:text-8xl">
             Cultivating <span className="text-dark_green">Excellence</span>{" "}
             Across Industries.
           </p>
-          <p className="my-3">
+          <p className="my-3 text-lg md:text-2xl">
             Empowering progress through innovative solutions in real estate ,
             agriculture, logistics, and more. Building sustainable futures, one
             industry at a time.
           </p>
           <Link
             href="/contact"
-            className="bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center uppercase"
+            className="bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center uppercase md:h-20 md:text-3xl"
           >
             Get in Touch
           </Link>
@@ -58,7 +59,7 @@ const Agob = () => {
                 {/* carousel item container/track */}{" "}
                 <div className="carousel-item">
                   {/* carousel items */}
-                  <div className="relative w-full h-80">
+                  <div className="relative w-full h-80 md:h-[35rem]">
                     <Image
                       src="/agro-2.jpg"
                       alt="farmers-in-farm"
@@ -73,7 +74,7 @@ const Agob = () => {
                   </div>
                 </div>{" "}
                 <div className="carousel-item">
-                  <div className="relative w-full h-80">
+                  <div className="relative w-full h-80 md:h-[35rem]">
                     <Image
                       src="/electrician.jpg"
                       alt="farmers-in-farm"
@@ -88,7 +89,7 @@ const Agob = () => {
                   </div>
                 </div>{" "}
                 <div className="carousel-item">
-                  <div className="relative w-full h-80">
+                  <div className="relative w-full h-80 md:h-[35rem]">
                     <Image
                       src="/car-rental.jpg"
                       alt="farmers-in-farm"
@@ -103,7 +104,7 @@ const Agob = () => {
                   </div>
                 </div>{" "}
                 <div className="carousel-item">
-                  <div className="relative w-full h-80">
+                  <div className="relative w-full h-80 md:h-[35rem]">
                     <Image
                       src="/construction.jpg"
                       alt="farmers-in-farm"
@@ -127,11 +128,11 @@ const Agob = () => {
       {/* service section */}
       <section className="w-full">
         <div className="p-2">
-          <p className="text-dark_green">What we do</p>
-          <h1 className="text-style text-2xl font-semibold">
+          <p className="text-dark_green text-lg md:text-2xl">What we do</p>
+          <h1 className="text-style text-2xl font-semibold md:text-3xl">
             Our <span className="text-light_green">Services</span>
           </h1>
-          <p className="my-3">
+          <p className="my-3 text-lg md:text-2xl">
             Empowering Industries with Integrated, Innovative Solutions
           </p>
         </div>
@@ -142,7 +143,7 @@ const Agob = () => {
                 key={service.id}
                 className="my-3 pb-6 bg-near_white rounded-md shadow-2xl shadow-light_green/40"
               >
-                <div className="relative w-full h-64">
+                <div className="relative w-full h-64 md:h-[25rem]">
                   <Image
                     src={`/${service.image}`}
                     alt={service.title}
@@ -154,10 +155,10 @@ const Agob = () => {
                   <div className="overlay"></div>
                 </div>
                 <div className="px-2">
-                  <h3 className="text-2xl my-3 text-dark_green">
+                  <h3 className="text-2xl my-3 text-dark_green md:text-3xl">
                     {service.title}
                   </h3>
-                  <p className="text-lg">
+                  <p className="text-lg md:text-2xl">
                     {service.description}...{" "}
                     <span>
                       <Link
@@ -180,13 +181,13 @@ const Agob = () => {
       {/* features section */}
       <section className="w-full mt-6">
         <div className="p-2">
-          <p className="text-dark_green">
+          <p className="text-dark_green text-lg md:text-2xl">
             Why choose <span className="text-light_green">Agob-synergy</span>
           </p>
-          <h1 className="text-style text-2xl font-semibold">
+          <h1 className="text-style text-2xl font-semibold md:text-3xl">
             Our <span className="text-light_green">Features</span>
           </h1>
-          <p className="my-3">Unifying Excellence Across Industries.</p>
+          <p className="my-3 text-lg md:text-2xl">Unifying Excellence Across Industries.</p>
         </div>
         <MaxWidthWrapper>
           <div className="w-full px-2">
@@ -195,7 +196,7 @@ const Agob = () => {
                 key={feature.id}
                 className="px-2 py-6 border-t border-solid border-light_green"
               >
-                <div className="relative w-full h-52">
+                <div className="relative w-full h-52 md:h-[25rem]">
                   <Image
                     src={`/${feature.image}`}
                     alt={feature.image}
@@ -207,14 +208,14 @@ const Agob = () => {
                   <div className="overlay"></div>
                 </div>
                 <div className="gap-4 my-3">
-                  <span className="font-bold text-light_green text-2xl">
+                  <span className="font-bold text-light_green text-2xl md:text-4xl">
                     0{feature.id}
                   </span>
                   <span>
-                    <p className="text-xl text-dark_green font-bold mb-2">
+                    <p className="text-xl text-dark_green font-bold mb-2 md:text-3xl">
                       {feature.title}
                     </p>
-                    <p className="text-lg">{feature.description}</p>
+                    <p className="text-lg md:text-2xl">{feature.description}</p>
                   </span>
                 </div>
               </div>
@@ -225,26 +226,11 @@ const Agob = () => {
       {/* testimonial section */}
       <Testimonies />
       {/* FAQs section */}
-      <section className="w-full mb-4 mt-16">
-        <MaxWidthWrapper>
-          <div className="w-full p-2">
-            <div>
-              <h3 className="text-4xl text-dark_green">Frequently Asked Questions</h3>
-              <p className="text-lg my-3">Got Questions? We&apos;ve got answers, Explore our FAQs to learn more about Agob Synergy&apos;s inovative approach and multi-industry expertise.</p>
-              <div className="relative w-full h-80 overflow-hidden">
-                <Image src={"/FAQs.jpg"} alt="faqs" fill priority objectFit="cover" objectPosition="center" />
-              </div>
-            </div>
-            <div>
-              <FAQs />
-            </div>
-          </div>
-        </MaxWidthWrapper>
-      </section>
+      <FAQSection />
       {/* cta section */}
-      <div className="w-full my-8 p-2 bg-light_green">
+      <div className="w-full my-8 px-2 pt-10 bg-light_green">
         <div className="w-full 2">
-          <div className="w-[90%] h-96 relative">
+          <div className="w-[90%] h-96 relative md:h-[30rem] md:w-[96%] md:mx-auto">
             <Image
               src={"/workers.jpg"}
               alt="agob-logo"
@@ -254,7 +240,7 @@ const Agob = () => {
               objectPosition="center"
             />
           </div>
-          <div className="w-[90%] h-96 relative -top-44 left-8">
+          <div className="w-[90%] h-96 relative -top-44 left-8 md:h-[30rem] md:left-20">
             <Image
               src={"/agob-logo.jpg"}
               alt="agob-logo"
@@ -265,12 +251,12 @@ const Agob = () => {
             />
           </div>
         </div>
-        <div className="relative -top-40">
-          <h1 className="text-5xl text-dark_green my-2">Join the Movement Towards Innovation.</h1>
-          <p className="text-lg text-dark_green my-3">Partner with Agob Synergy and unlock transformative solutions tailored to your industry needs. Connect with us today to explore how we can shape a sustainable tomorrow.</p>
+        <div className="relative -top-40 md:-top-32">
+          <h1 className="text-5xl text-dark_green my-2 md:text-7xl">Join the Movement Towards Innovation.</h1>
+          <p className="text-lg text-dark_green my-3 md:text-2xl">Partner with Agob Synergy and unlock transformative solutions tailored to your industry needs. Connect with us today to explore how we can shape a sustainable tomorrow.</p>
           <Link
             href="/contact"
-            className="bg-dark_green w-3/5 h-14 text-lg text-light_green shadow-2xl shadow-light_green flex items-center justify-center uppercase"
+            className="bg-dark_green w-3/5 h-14 text-lg text-light_green shadow-2xl shadow-light_green flex items-center justify-center uppercase md:h-20 md:text-3xl"
           >
             Connect Now
           </Link>  

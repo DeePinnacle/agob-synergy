@@ -1,0 +1,26 @@
+import React from 'react'
+import FAQs from './FAQs'
+import { MaxWidthWrapper } from './ui/max-width'
+import Image from "next/image"
+const FAQSection = () => {
+    return (
+        <section className="w-full mb-4 mt-16">
+            <MaxWidthWrapper>
+                <div className="w-full p-2">
+                    <div>
+                        <h3 className="text-4xl text-dark_green">Frequently Asked Questions</h3>
+                        <p className="text-lg my-3 md:text-2xl">Got Questions? We&apos;ve got answers, Explore our FAQs to learn more about Agob Synergy&apos;s inovative approach and multi-industry expertise.</p>
+                        <div className="relative w-full h-80 overflow-hidden md:h-[35rem]">
+                            <Image src={"/FAQs.jpg"} alt="faqs" fill priority objectFit="cover" objectPosition="center" />
+                        </div>
+                    </div>
+                    <div>
+                        <FAQs />
+                    </div>
+                </div>
+            </MaxWidthWrapper>
+        </section>
+    )
+}
+
+export default FAQSection

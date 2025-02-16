@@ -14,24 +14,24 @@ const About = () => {
                     <div className="w-full">
                         <div className="p-2">
                             <div className="">
-                                <p className="text-dark_green text-lg font-semibold">
+                                <p className="text-dark_green text-lg font-semibold md:text-2xl">
                                     Who we are
                                 </p>
-                                <h3 className="text-2xl font-semibold text-style">
+                                <h3 className="text-2xl font-semibold text-style md:text-3xl">
                                     About <span className="text-light_green">Agob-Synergy</span>
                                 </h3>
-                                <p className="my-3">
+                                <p className="my-3 text-lg md:text-2xl">
                                     Innovating Across Industries, Empowering Sustainable Growth.
                                 </p>
                             </div>
-                            <p className="text-lg">
+                            <p className="text-lg md:text-2xl">
                                 Agob Synergy is a dynamic multi-vendor enterprise committed to
                                 excellence across diverse sectors. With deep roots in real
                                 estate, agriculture, construction, electrical merchandising, and
                                 logistics, we harness innovative strategies and sustainable
                                 practices to drive transformative projects.
                             </p>
-                            <p className="text-lg mb-2">
+                            <p className="text-lg mb-2 md:text-2xl">
                                 Our integrated approach ensures that every initiative not only
                                 meets modern standards of quality and efficiency but also
                                 contributes to building resilient communities and fostering
@@ -39,13 +39,13 @@ const About = () => {
                             </p>
                             <Link
                                 href="/about"
-                                className={`${pathName !== "/about" ? "block" : "hidden" } bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center uppercase`}
+                                className={`${pathName !== "/about" ? "block" : "hidden" } bg-light_green w-3/5 h-14 text-lg text-dark_green shadow-2xl shadow-light_green flex items-center justify-center uppercase md:h-20 md:text-3xl`}
                             >
                                 Learn more &rarr;
                             </Link>
                         </div>
                         <div className={`${ pathName !== "/about" ? "block": "hidden" } w-full my-4`}>
-                            <div className="relative w-full h-96">
+                            <div className="relative w-full h-96 md:h-[35rem]">
                                 <Image
                                     src="/agro-4.jpg"
                                     alt="farmers"
@@ -57,7 +57,7 @@ const About = () => {
                             </div>
                         </div>
                         <div className={`${ pathName === "/about" ? "block": "hidden" } w-full my-4`}>
-                            <div className="relative w-full h-96">
+                            <div className="relative w-full h-96 md:h-[35rem]">
                                 <Image
                                     src="/agob-logo.jpg"
                                     alt="farmers"
