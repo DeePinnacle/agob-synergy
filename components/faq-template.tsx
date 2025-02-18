@@ -27,14 +27,14 @@ const FAQTemplate = ({
     return (
         <div className='w-full border-b border-solid border-light_green my-3 px-2 py-6'>
             <span
-                className='flex flex-row items-center justify-between gap-6 text-lg text-dark_green font-semibold md:text-2xl'
+                className='flex flex-row items-center justify-between gap-6 text-lg text-dark_green font-semibold md:text-2xl lg:text-base'
                 onClick={() => handleToggle(id)}
             >
                 <p>{question}</p>
-                {active === id ? <ArrowDown /> : <ArrowUp />} {/* Only show the correct icon */}
+                {active === id ? <ArrowUp /> : <ArrowDown />} {/* Only show the correct icon */}
             </span>
             <div className={`${active === id ? 'block' : 'hidden'} mt-4 md:mt-6`}>
-                <p className='text-lg md:text-2xl'>{answer}</p>
+                <p className='text-lg md:text-2xl lg:text-base'>{answer}</p>
             </div>
         </div>
     )

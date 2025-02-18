@@ -4,7 +4,7 @@ export const MaxWidthWrapper = ({ children, className }:{
     className?: string
 }) => {
     return (
-        <div className={cn(`w-full max-w-6xl`,className)}>
+        <div className={cn(`w-full max-w-6xl lg:mx-auto`,className)}>
             { children }
         </div>
     )

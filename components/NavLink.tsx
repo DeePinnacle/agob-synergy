@@ -9,7 +9,7 @@ const NavLink = () => {
         // alert("welcome")
     }
     return (
-        <nav>
+        <nav className="lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:w-[50rem] lg:h-16">
             <ul className='link-style'>
                 <li>
                     <Link href={"/"}>Home</Link>
@@ -21,38 +21,42 @@ const NavLink = () => {
                     <li onClick={handleToggle}>
                         <Link href={"/"} className='w-full !flex !flex-row !items-center !justify-between'>Services { toggle ? <ArrowUp /> : <ArrowDown />}</Link>
                     </li>
-                    <div className={`${ toggle ? "block" : "hidden" } w-full relative mx-2`}>
-                            <ul>
-                                <li>
-                                    <Link href={"/service/real_estate"}>Real Estate</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/construction"}>Construction</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/interior_exterior"}>Interior/Exterior Decoration</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/electrical_merchandising"}>Electrical Marchandising</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/hospitality"}>Hospitality & Food Production</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/agriculture"}>Agriculture Business</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/automobile"}>Automoble & Spare parts</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/car_hire"}>Car Hire/Logistics</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/supermarket_retail"}>Supermarket/Retail</Link>
-                                </li>
-                                <li>
-                                    <Link href={"/service/finance_investment"}>Finance/Investment</Link>
-                                </li>
+                    <div className={`${ toggle ? "block" : "hidden" } w-full relative mx-2 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bg-white lg:w-[44rem]`}>
+                            <ul className="lg:grid lg:grid-cols-2 lg:gap-3 ">
+                                <div className='w-full'>
+                                    <li>
+                                        <Link href={"/service/real_estate"}>Real Estate</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/construction"}>Construction</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/interior_exterior"}>Interior/Exterior Decoration</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/electrical_merchandising"}>Electrical Marchandising</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/hospitality"}>Hospitality & Food Production</Link>
+                                    </li>
+                                </div>
+                                <div className='w-full'>
+                                    <li>
+                                        <Link href={"/service/agriculture"}>Agriculture Business</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/automobile"}>Automoble & Spare parts</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/car_hire"}>Car Hire/Logistics</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/supermarket_retail"}>Supermarket/Retail</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/service/finance_investment"}>Finance/Investment</Link>
+                                    </li>
+                                </div>
                             </ul>
                         </div>
                 </span>
@@ -66,7 +70,7 @@ const NavLink = () => {
                     <Link href={"/terms"}>Terms</Link>
                 </li> */}
             </ul>
-            <Link href={"/contact"} className='w-full my-9 py-4 bg-dark_green text-light_green uppercase flex flex-row items-center justify-center'>contact us</Link>
+            <Link href={"/contact"} className='w-full my-9 py-4 bg-dark_green text-light_green uppercase flex flex-row items-center justify-center lg:w-36'>contact us</Link>
         </nav>
     )
 }
