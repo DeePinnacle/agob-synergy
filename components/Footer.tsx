@@ -44,10 +44,10 @@ const Footer = () => {
         <ul>
           <li className='text-light_green text-2xl md:text-3xl lg:text-2xl'>Contact Information:</li>
           <li className='text-light_green text-lg my-3 md:text-2xl lg:text-base'>
-            <Link href={"mailto:agobsynergy@gmail.com"}>Email: agobsynergy@gmail.com</Link>
+            <Link href={"mailto:agobsynergy@gmail.com"}>Email: agobsynergyltd@gmail.com</Link>
           </li>
           <li className='text-light_green text-lg my-3 md:text-2xl lg:text-base'>
-            <Link href={"tel:+234 000 0000"}>Phone: +234 000 0000</Link>
+            <Link href={"tel:+234 70 64760 842"}>Phone: +234 70 64760 842</Link>
           </li>
           <li className='text-light_green text-lg my-3 md:text-2xl lg:text-base'>
             <Link href={""}>Address: Agob-synergy limited</Link>
@@ -66,7 +66,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className='bg-[#25D366] w-10 h-10 flex flex-col items-center justify-center rounded-md md:w-16 md:h-16 lg:w-10 lg:h-10'>
-              <Link href={""}>
+              <Link href={"tel:+234 70 64760 842"}>
                 <FaWhatsapp className='text-white w-6 h-6 md:w-10 md:h-10 lg:h-6 lg:w-6' />
               </Link>
             </li>
