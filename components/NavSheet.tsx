@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React,{ useState, useEffect } from 'react'
 import {
     Sheet,
     SheetContent,
@@ -9,10 +10,19 @@ import {
 import { CiMenuFries } from "react-icons/ci"
 import NavLink from './NavLink'
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 const NavSheet = () => {
+
+    const pathname = usePathname()
+    const [ isOpen, setIsOpen ] = useState(false)
+
+    useEffect(()=>{
+        setIsOpen(false)
+    }, [pathname])
+
     return (
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger>
                 <CiMenuFries className='text-3xl text-light_green font-bold cursor-pointer md:w-10 md:h-10' />
             </SheetTrigger>
@@ -25,7 +35,7 @@ const NavSheet = () => {
                         <span className='text-dark_green md:text-2xl'>Agob-Synergy</span>
                     </SheetTitle>
                 </SheetHeader>
-                <NavLink />
+                <NavLink setIsOpen={ setIsOpen } />
             </SheetContent>
         </Sheet>
 

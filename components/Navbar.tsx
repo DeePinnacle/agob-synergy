@@ -17,7 +17,7 @@ const Navbar = () => {
                     <NavSheet />
                 </div>
                 {/* large screen */}
-                <div className="lg:block">
+                <div className="hidden lg:block">
                     <NavLink />
                 </div>
             </div>

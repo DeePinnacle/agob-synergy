@@ -1,8 +1,13 @@
 "use client"
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import Link from "next/link"
 import { ArrowDown, ArrowUp } from 'lucide-react'
-const NavLink = () => {
+
+interface openProps{
+    setIsOpen?: Dispatch<SetStateAction<boolean>>;
+}
+
+const NavLink = ({ setIsOpen }:openProps) => {
     const [ toggle, setToggle ] = useState(false)
     const handleToggle =()=>{
         setToggle(!toggle)
@@ -12,10 +17,10 @@ const NavLink = () => {
         <nav className="lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:w-[50rem] lg:h-16">
             <ul className='link-style'>
                 <li>
-                    <Link href={"/"}>Home</Link>
+                    <Link href={"/"} onClick={()=> setIsOpen && setIsOpen(false)}>Home</Link>
                 </li>
                 <li>
-                    <Link href={"/about"}>About</Link>
+                    <Link href={"/about"} onClick={()=> setIsOpen && setIsOpen(false)}>About</Link>
                 </li>
                 <span className='relative'>
                     <li onClick={handleToggle}>
@@ -61,7 +66,7 @@ const NavLink = () => {
                         </div>
                 </span>
                 <li>
-                    <Link href={"/faqs"}>FAQs</Link>
+                    <Link href={"/faqs"} onClick={()=> setIsOpen && setIsOpen(false)}>FAQs</Link>
                 </li>
                 {/* <li>
                     <Link href={"/privacy_policy"}>Terms</Link>
@@ -70,7 +75,7 @@ const NavLink = () => {
                     <Link href={"/terms"}>Terms</Link>
                 </li> */}
             </ul>
-            <Link href={"/contact"} className='w-full my-9 py-4 bg-dark_green text-light_green uppercase flex flex-row items-center justify-center lg:w-36'>contact us</Link>
+            <Link href={"/contact"} className='w-full my-9 py-4 bg-dark_green text-light_green uppercase flex flex-row items-center justify-center lg:w-36' onClick={()=> setIsOpen && setIsOpen(false)}>contact us</Link>
         </nav>
     )
 }
