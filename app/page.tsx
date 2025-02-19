@@ -37,9 +37,7 @@ const Agob = () => {
             Across Industries.
           </p>
           <p className="my-3 text-lg md:text-2xl lg:text-base lg:w-3/4">
-            Empowering progress through innovative solutions in real estate ,
-            agriculture, logistics, and more. Building sustainable futures, one
-            industry at a time.
+            Empowering progress through innovative solutions in real estate, agriculture, logistics, and more. Building sustainable futures with advanced technology.
           </p>
           <Link
             href="/contact"

@@ -5,7 +5,7 @@ import { MaxWidthWrapper } from '@/components/ui/max-width'
 import { coreValues } from '@/data/data'
 import MissionVision from '@/components/MissionVision'
 import Testimonies from '@/components/Testimonies'
-import Team from '@/components/Team'
+// import Team from '@/components/Team'
 import PagesHero from '@/components/ui/pages-hero'
 const page = () => {
   return (
@@ -48,7 +48,7 @@ const page = () => {
         </div>
       </div>
       {/* our team */}
-      <Team />
+      {/* <Team /> */}
     </>
   )
 }
