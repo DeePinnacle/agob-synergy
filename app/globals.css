@@ -92,7 +92,7 @@
   .link-style li{
     @apply mx-3;
   }
-  .link-style li a{
+  .link-style li .nav-anchor, li span{
     @apply block text-dark_green text-lg my-4 p-4 text-left md:text-2xl lg:text-base lg:w-full;
     @apply hover:bg-dark_green hover:text-light_green hover:delay-300 hover:transition-all hover:duration-500
   }
