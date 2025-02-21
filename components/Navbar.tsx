@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className='w-full sticky top-0 z-[999]'>
             <div className='w-full px-3 py-4 bg-white shadow-lg shadow-black/15 flex flex-row items-center justify-between lg:py-2'>
                 <Link href={"/"}>
-                    <div className='w-24 h-24 relative overflow-hidden md:w-20 md:h-20 lg:h-16'>
+                    <div className='w-16 h-16 relative overflow-hidden md:w-20 md:h-20 lg:h-16'>
                         <Image src={"/logo.png"} alt="agob-synergy-logo" fill priority objectFit="cover" objectPosition="center" />
                     </div>
                 </Link>

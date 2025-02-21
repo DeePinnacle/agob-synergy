@@ -37,91 +37,89 @@ const NavLink = ({ setIsOpen }: openProps) => {
             About
           </Link>
         </li>
-        <span className="relative">
-          <DropdownMenu open={drop} onOpenChange={handleOpenChange}>
+        <DropdownMenu open={drop} onOpenChange={handleOpenChange}>
             <DropdownMenuTrigger asChild>
               <li>
-                <span className="flex flex-row items-center justify-between">
+                <span className="flex flex-row items-center justify-between cursor-pointer">
                     <Link href={""} >Services</Link>
                     { flip === false ? <ArrowDown /> : <ArrowUp /> } 
                 </span>
               </li>  
               {/* <Button className="bg-white w-full border-none outline-none shadow-none text-lg !text-left text-dark_green mx-3 hover:bg-dark_green hover:text-light_green" variant="outline">Open</Button> */}
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="z-[4000] relative">
-              <ul>
-                <DropdownMenuGroup>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/real_estate"}>Real Estate</Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/construction"}>Construction</Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/interior_exterior"}>
-                        Interior/Exterior Decoration
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/electrical_merchandising"}>
-                        Electrical Marchandising
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/hospitality"}>
-                        Hospitality & Food Production
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuGroup>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/agriculture"}>
-                        Agriculture Business
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/automobile"}>
-                        Automoble & Spare parts
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/car_hire"}>Car Hire/Logistics</Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/supermarket_retail"}>
-                        Supermarket/Retail
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <li>
-                      <Link href={"/service/finance_investment"}>
-                        Finance/Investment
-                      </Link>
-                    </li>
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-              </ul>
+            <DropdownMenuContent className="z-[4000] h-[24.375rem] overflow-y-auto lg:overflow-y-hidden lg:w-[660px] lg:h-[480px]">
+                <ul className="drop_items lg:grid lg:grid-cols-2 lg:gap-3">
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/real_estate"}>Real Estate</Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/construction"}>Construction</Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/interior_exterior"}>
+                          Interior/Exterior Decoration
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/electrical_merchandising"}>
+                          Electrical Marchandising
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/hospitality"}>
+                          Hospitality & Food Production
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/agriculture"}>
+                          Agriculture Business
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/automobile"}>
+                          Automoble & Spare parts
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/car_hire"}>Car Hire/Logistics</Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/supermarket_retail"}>
+                          Supermarket/Retail
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="drop__menu__item">
+                      <li>
+                        <Link href={"/service/finance_investment"}>
+                          Finance/Investment
+                        </Link>
+                      </li>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </ul>
             </DropdownMenuContent>
           </DropdownMenu>
-        </span>
         <li>
           <Link href={"/faqs"} className="nav-anchor" onClick={() => setIsOpen && setIsOpen(false)}>
             FAQs

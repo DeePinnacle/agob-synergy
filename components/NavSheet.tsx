@@ -26,7 +26,7 @@ const NavSheet = () => {
             <SheetTrigger>
                 <CiMenuFries className='text-3xl text-light_green font-bold cursor-pointer md:w-10 md:h-10' />
             </SheetTrigger>
-            <SheetContent className='z-[1000] overflow-y-auto'>
+            <SheetContent className='z-[1000] !overflow-y-auto'>
                 <SheetHeader>
                     <SheetTitle className='flex flex-row items-center justify-between'>
                         <div className='w-14 h-14 relative overflow-hidden md:w-20 md:h-29'>
