@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <DisplayTemplate data={electricalMerchandising} heroImg='electro.jpg' />
+    <DisplayTemplate data={electricalMerchandising} heroImg='Electro.jpg' />
   )
 }
 

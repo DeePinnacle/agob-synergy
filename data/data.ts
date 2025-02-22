@@ -26,7 +26,7 @@ export const services = [
     {
       id: 3,
       title: "Electrical & General Merchandising",
-      image: "electro.jpg",
+      image: "Electro.jpg",
       description:
         "Supplying quality electrical installations, equipment, and general merchandise for modern residential and commercial solutions.",
       link: "electrical_merchandising"
