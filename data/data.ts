@@ -306,7 +306,7 @@ export const services = [
               "From initial planning to post-construction management, we provide end-to-end solutions that maximize long-term value."
           }
         ],
-      recentWorks: ["estate-building.jpg", "estate-build.jpg", "real-estate.jpg"]
+      recentWorks: ["estate-building.jpg", "estate_1.jpg", "estate_2.jpg"]
     }
   ];
   
@@ -381,7 +381,7 @@ export const services = [
               "From design to post-build maintenance, we offer end-to-end solutions that maximize long-term value."
           }
         ],
-      recentWorks: ["estate-building.jpg", "estate-build.jpg", "real-estate.jpg"]
+      recentWorks: ["building-cons.jpg", "building-construction.jpg", "construction-site.jpg"]
     }
   ];
   
@@ -451,7 +451,7 @@ export const services = [
               "From concept to completion, our dedicated team manages every detail, ensuring a smooth and stress-free experience.",
           },
         ],
-      recentWorks: ["estate-building.jpg", "estate-build.jpg", "real-estate.jpg"],
+      recentWorks: ["exterior.jpg", "interior.jpeg", "interior_des.jpeg"],
     },
   ];
   
@@ -522,7 +522,7 @@ export const services = [
               "We leverage deep market insights to continuously optimize our offerings, ensuring you receive the most relevant and cutting-edge solutions.",
           },
         ],
-      recentWorks: ["electrician.jpg", "electrician.jpg", "electrician.jpg"],
+      recentWorks: ["electrician.jpg", "electro.jpeg", "elect-elect.jpeg"],
     },
   ];
   
@@ -593,7 +593,7 @@ export const services = [
               "Our team of seasoned professionals is passionate about delivering exceptional service, ensuring that every project is executed with precision and care.",
           },
         ],
-      recentWorks: ["food.jpg", "hopitality.jpg", "food.jpg"],
+      recentWorks: ["foodie1.jpg", "foodie2.jpg", "foodie3.jpg"],
     },
   ];
   
@@ -732,7 +732,7 @@ export const services = [
               "We offer cost-effective solutions without compromising on quality, ensuring you get the best value in the market.",
           },
         ],
-      recentWorks: ["car-parts.jpg", "car-parts.jpg", "car-parts.jpg"],
+      recentWorks: ["car-parts.jpg", "parts-1.jpg", "part-2.jpg"],
     },
   ];
 
@@ -802,7 +802,7 @@ export const services = [
               "Our team is committed to providing personalized, responsive service, ensuring a seamless experience from start to finish.",
           },
         ],
-      recentWorks: ["car-rent.jpg", "car-rent.jpg", "car-rental.jpg"],
+      recentWorks: ["car-rent.jpg", "hire.jpg", "hire-2.jpg"],
     },
   ];
   export const supermarketRetail = [

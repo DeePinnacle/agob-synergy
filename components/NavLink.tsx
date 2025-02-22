@@ -9,119 +9,119 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
 interface openProps {
   setIsOpen?: Dispatch<SetStateAction<boolean>>;
 }
 
 const NavLink = ({ setIsOpen }: openProps) => {
-    const [ drop, setIsDrop ] = useState(false)
-    const [ flip, setIsFlip ] = useState(false)
-    const handleOpenChange = (drop: boolean) =>{
-        setIsDrop(drop)
-        if(drop === false){
-            setIsFlip(false)
-        }else{
-            setIsFlip(true)
-        } 
+  const [drop, setIsDrop] = useState(false);
+  const [flip, setIsFlip] = useState(false);
+
+  const handleOpenChange = (drop: boolean) => {
+    setIsDrop(drop);
+    if (drop === false) {
+      setIsFlip(false);
+    } else {
+      setIsFlip(true);
     }
+  };
   return (
     <nav className="lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:w-[50rem] lg:h-16">
       <ul className="link-style">
         <li>
-          <Link href={"/"} className="nav-anchor" onClick={() => setIsOpen && setIsOpen(false)}>
+          <Link
+            href={"/"}
+            className="nav-anchor"
+            onClick={() => setIsOpen && setIsOpen(false)}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link href={"/about"} className="nav-anchor" onClick={() => setIsOpen && setIsOpen(false)}>
+          <Link
+            href={"/about"}
+            className="nav-anchor"
+            onClick={() => setIsOpen && setIsOpen(false)}
+          >
             About
           </Link>
         </li>
         <DropdownMenu open={drop} onOpenChange={handleOpenChange}>
-            <DropdownMenuTrigger asChild>
-              <li>
-                <span className="flex flex-row items-center justify-between cursor-pointer">
-                    <Link href={""} >Services</Link>
-                    { flip === false ? <ArrowDown /> : <ArrowUp /> } 
-                </span>
-              </li>  
-              {/* <Button className="bg-white w-full border-none outline-none shadow-none text-lg !text-left text-dark_green mx-3 hover:bg-dark_green hover:text-light_green" variant="outline">Open</Button> */}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="z-[4000] h-[24.375rem] overflow-y-auto lg:overflow-y-hidden lg:w-[660px] lg:h-[480px]">
-                <ul className="drop_items lg:grid lg:grid-cols-2 lg:gap-3">
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/real_estate"}>Real Estate</Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/construction"}>Construction</Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/interior_exterior"}>
-                          Interior/Exterior Decoration
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/electrical_merchandising"}>
-                          Electrical Marchandising
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/hospitality"}>
-                          Hospitality & Food Production
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/agriculture"}>
-                          Agriculture Business
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/automobile"}>
-                          Automoble & Spare parts
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/car_hire"}>Car Hire/Logistics</Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/supermarket_retail"}>
-                          Supermarket/Retail
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="drop__menu__item">
-                      <li>
-                        <Link href={"/service/finance_investment"}>
-                          Finance/Investment
-                        </Link>
-                      </li>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                </ul>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <li>
+              <span className="flex flex-row items-center justify-between cursor-pointer">
+                <Link href={""}>Services</Link>
+                {flip === false ? <ArrowDown /> : <ArrowUp />}
+              </span>
+            </li>
+            {/* <Button className="bg-white w-full border-none outline-none shadow-none text-lg !text-left text-dark_green mx-3 hover:bg-dark_green hover:text-light_green" variant="outline">Open</Button> */}
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="z-[4000] h-[24.375rem] overflow-y-auto lg:overflow-y-hidden lg:w-[660px] lg:h-[480px]">
+            <ul className="drop_items lg:grid lg:grid-cols-2 lg:gap-3">
+              <DropdownMenuGroup>
+                <Link href="/service/real_estate">
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Real Estate</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/construction"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Construction</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/interior_exterior"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Interior/Exterior Decoration</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/electrical_merchandising"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Electrical Marchandising</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/hospitality"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Hospitality & Food Production</li>
+                  </DropdownMenuItem>
+                </Link>
+              </DropdownMenuGroup>
+              <DropdownMenuGroup>
+                <Link href={"/service/agriculture"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Agriculture Business</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/automobile"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Automoble & Spare parts</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/car_hire"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Car Hire/Logistics</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/supermarket_retail"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Supermarket/Retail</li>
+                  </DropdownMenuItem>
+                </Link>
+                <Link href={"/service/finance_investment"}>
+                  <DropdownMenuItem className="drop__menu__item">
+                    <li>Finance/Investment</li>
+                  </DropdownMenuItem>
+                </Link>
+              </DropdownMenuGroup>
+            </ul>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <li>
-          <Link href={"/faqs"} className="nav-anchor" onClick={() => setIsOpen && setIsOpen(false)}>
+          <Link
+            href={"/faqs"}
+            className="nav-anchor"
+            onClick={() => setIsOpen && setIsOpen(false)}
+          >
             FAQs
           </Link>
         </li>

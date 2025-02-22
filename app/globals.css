@@ -100,7 +100,7 @@
     @apply text-dark_green text-lg my-1 p-4 lg:text-base
   }
   .drop__menu__item{
-    @apply focus:!bg-dark_green
+    @apply focus:!bg-dark_green !cursor-pointer
   } 
   .drop__menu__item:focus li{
     @apply text-light_green
