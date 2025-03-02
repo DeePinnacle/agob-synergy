@@ -66,7 +66,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className='bg-[#25D366] w-10 h-10 flex flex-col items-center justify-center rounded-md md:w-16 md:h-16 lg:w-10 lg:h-10'>
-              <Link href={"Add me as a contact on WhatsApp. https://wa.me/qr/7HJLGE6K66NHO1"}>
+              <Link href={"https://wa.me/qr/7HJLGE6K66NHO1"}>
                 <FaWhatsapp className='text-white w-6 h-6 md:w-10 md:h-10 lg:h-6 lg:w-6' />
               </Link>
             </li>
