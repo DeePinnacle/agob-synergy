@@ -56,17 +56,17 @@ const Footer = () => {
           <li className='text-2xl text-light_green mb-2 md:text-3xl lg:text-2xl'>Follow Us</li>
           <span className='grid grid-cols-2 gap-3 items-center w-24 md:w-40 lg:w-28'>
             <li className='bg-[#1877F2] w-10 h-10 flex flex-col items-center justify-center rounded-md md:w-16 md:h-16 lg:w-10 lg:h-10'>
-              <Link href={""}>
+              <Link href={"https://www.facebook.com/share/1E65YWHnrE/"}>
                 <FaFacebook className='text-white w-6 h-6 md:w-10 md:h-10 lg:h-6 lg:w-6' />
               </Link>
             </li>
             <li className='ig-gradient w-10 h-10 flex flex-col items-center justify-center rounded-md md:w-16 md:h-16 lg:w-10 lg:h-10'>
-              <Link href={""}>
+              <Link href={"https://www.instagram.com/p/DF7ewvKsy0T/?igsh=MTk2Z2dkanF6aGlwdw=="}>
                 <FaInstagram className='text-white w-6 h-6 md:w-10 md:h-10 lg:h-6 lg:w-6' />
               </Link>
             </li>
             <li className='bg-[#25D366] w-10 h-10 flex flex-col items-center justify-center rounded-md md:w-16 md:h-16 lg:w-10 lg:h-10'>
-              <Link href={"tel:+234 70 64760 842"}>
+              <Link href={"Add me as a contact on WhatsApp. https://wa.me/qr/7HJLGE6K66NHO1"}>
                 <FaWhatsapp className='text-white w-6 h-6 md:w-10 md:h-10 lg:h-6 lg:w-6' />
               </Link>
             </li>
